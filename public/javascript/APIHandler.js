@@ -13,7 +13,8 @@ class APIHandler {
   };
  
   getOneCharacter = (characterId) => {
-    return this.api.get(`/characters/${characterId}`);
+    return this.api.get(`/characters/${characterId}`)
+
   }
  
   createCharacter = (characterInfo) => {
