@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Nama25/lab-ajax-crud-characters/issues"
   },
-  "homepage": "https://github.com/Nama25/lab-ajax-crud-characters#readme"
+  "homepage": "https://github.com/Nama25/lab-ajax-crud-characters#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
