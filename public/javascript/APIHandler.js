@@ -4,32 +4,40 @@ class APIHandler {
   constructor (baseUrl) {
     this.BASE_URL = baseUrl;
     this.api = axios.create({
-      baseUrl
+      baseUrl: this.BASE_URL // added this.BASE_URL
     });
   }
 
-  getAllCharacters = () => {
+  // changed from getCharacter to getFullList (it was alreday there,see below)
+  getFullList = () => {
     return this.api.get('/characters');
   };
  
-  getOneCharacter = (characterId) => {
+  // changed to getOneRegister
+  getOneRegister = (characterId) => {
     return this.api.get(`/characters/${characterId}`)
 
   }
- 
-  createCharacter = (characterInfo) => {
+
+ // changed
+  createOneRegister = (characterInfo) => {
     return this.api.post(`/characters`, characterInfo);
   }
  
-  deleteCharacter = (characterId) => {
+ // changed
+  deleteOneRegister = (characterId) => {
     return this.api.delete(`/characters/${characterId}`);
   }
 
-  editCharacter = (characterId, characterInfo) => {
+ // changed
+  updateOneRegister = (characterId, characterInfo) => {
     return this.api.put(`/characters/${characterId}`, characterInfo);
   }
 
-  getFullList () {
+}
+   
+
+/* getFullList () {
 
   }
 
@@ -48,4 +56,4 @@ class APIHandler {
   deleteOneRegister () {
 
   }
-}
+  */
